@@ -1,0 +1,45 @@
+h1{
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.book-card {
+    margin-bottom: 20px;
+    border: 1px solid #eb0808;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: plum;
+}
+.book-card img {
+    max-width: 95%;
+    height: fit-content;
+}
+.search-bar {
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 1em;
+    padding-inline: 7cm;
+
+}
+.text-center mb-4{
+    background-color: #8916e7;
+    
+    padding: 1em;
+    text-align: center;
+}
+.modal-body{
+    background-color: #8bccf8;
+}
+.btn btn-primary{
+    background-color: #eb0808;
+}
+.addbook{
+    float: right;
+    margin-left:0;
+    padding-top: 0rem;
+
+
+}
+

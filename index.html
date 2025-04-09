@@ -44,6 +44,85 @@
         </div>
         <div class="modal-footer"><button type="submit" class="btn btn-success">Add</button></div>
       </form>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <h1>Book Management System</h1>
+  <div class="container mt-5">
+    <div class="search-bar">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search books by title or author...">
+    </div>
+    
+    
+    
+    <ul class="nav nav-tabs" id="bookTabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-tab="all" href="#"><i class="fas fa-book"></i> All Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-tab="favorites" href="#"><i class="fas fa-star"></i> Favorites</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-tab="unread" href="#"> <i class="fas fa-eye-slash"></i> Unread</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-tab="read" href="#"> <i class="fas fa-check-circle"></i>Read</a>
+      </li>
+    </ul>
+    
+  
+      <!-- Add Book Button -->
+    <div class="addbook">  
+      <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#addBookModal">Add Book</button>
+ 
+    </div>
+   
+    <!-- Book List -->
+    <div id="bookList" class="mt-4 row"></div>
+  </div>
+
+  <!-- Add Book Modal -->
+  <div class="modal fade" id="addBookModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addBookForm">
+            <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" id="title" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" id="author" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="genre" class="form-label">Genre</label>
+              <input type="text" id="genre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select id="status" class="form-select" required>
+                <option value="Unread">Unread</option>
+                <option value="Read">Read</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Cover Image</label>
+              <input type="file" id="image" class="form-control" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -51,6 +130,9 @@
   <div class="modal fade" id="editBookModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <form id="editBookForm" class="modal-content">
+  <div class="modal fade" id="editBookModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Edit Book</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -75,5 +157,41 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+</body>
+</html>
+          <form id="editBookForm">
+            <input type="hidden" id="editId">
+            <div class="mb-3">
+              <label for="editTitle" class="form-label">Title</label>
+              <input type="text" id="editTitle" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="editAuthor" class="form-label">Author</label>
+              <input type="text" id="editAuthor" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="editGenre" class="form-label">Genre</label>
+              <input type="text" id="editGenre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="editStatus" class="form-label">Status</label>
+              <select id="editStatus" class="form-select" required>
+                <option value="Unread">Unread</option>
+                <option value="Read">Read</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="editImage" class="form-label">Cover Image</label>
+              <input type="file" id="editImage" class="form-control" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>
